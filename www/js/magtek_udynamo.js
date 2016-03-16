@@ -7,14 +7,14 @@
         };
  
     MagTek.isDeviceConnected = function(callback, error) {
-        $('.error').html('Making cordova.exec call to isDeviceConnected', []);
+        console.log('Making cordova.exec call to isDeviceConnected');
         var success = function(connected) {
             callback(connected);
         };
         var fail_handler = error || fail;
 
         cordova.exec(success, fail_handler, 'com.egood.magtek-udynamo', 'isDeviceConnected', []);
-        $('.error').html('Made cordova.exec call to isDeviceConnected');
+        console.log('Made cordova.exec call to isDeviceConnected');
     };
 
     MagTek.isDeviceOpened = function(callback, error) {
