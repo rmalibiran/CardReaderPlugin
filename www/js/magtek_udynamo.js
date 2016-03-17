@@ -172,13 +172,7 @@
     //..... A few methods skipped
 
 
-    MagTek.setDeviceType = function(callback, device_type) {
-        var success = function(status) { callback(status); };
-        var fail_handler = error || fail;
-
-        cordova.exec(success, fail_handler, 'com.egood.magtek-udynamo', 'setDeviceType', [device_type]);
-    };
-    MagTek.setDeviceType = function(callback, device_type) {
+    MagTek.setDeviceType = function(callback, device_type, error) {
         var success = function(status) { callback(status); };
         var fail_handler = error || fail;
 
